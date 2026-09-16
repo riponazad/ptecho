@@ -243,12 +243,6 @@ This repo also bundles several point-tracking models as baselines. If your work 
  
 ---
  
-## 📬 Contact
- 
-For questions or issues, please open a [GitHub Issue](https://github.com/riponazad/ptecho/issues) or contact us at `md.a.azad@ntnu.no`.
- 
----
- 
 ## 📜 License
 
 This repository uses a multi-license structure: the original code is MIT-licensed, but several vendored third-party models keep their own upstream license — including one that is **non-commercial only**. Check the table below before using a specific component, especially commercially.
