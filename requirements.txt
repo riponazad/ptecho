@@ -1,0 +1,12 @@
+torch>=2.0
+numpy
+opencv-python
+mediapy
+Pillow
+matplotlib>=3.7
+scikit-image
+einops
+fire
+tqdm
+gradio
+tensorboard
