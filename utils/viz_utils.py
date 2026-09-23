@@ -16,6 +16,8 @@ def visualize_tracking(
     alpha: float = 1.0,
     track_length: int = 0,
     thickness: int = 2,
+    radius: int = None,
+    solid: bool = False,
 ) -> np.ndarray:
 
     num_points, num_frames = points.shape[:2]
@@ -24,7 +26,8 @@ def visualize_tracking(
     if gray and frames.shape[-1] != 3:
         frames = gray2rgb(frames.squeeze())
 
-    radius = max(6, int(0.006 * min(height, width)))
+    if radius is None:
+        radius = max(6, int(0.006 * min(height, width)))
 
     quality_colors = {
         0: np.array([255, 0, 0]),
@@ -41,6 +44,7 @@ def visualize_tracking(
     for t in range(num_frames):
         overlay = np.zeros_like(video[t], dtype=np.uint8)
         t_start = max(1, t - track_length)
+        solid_dots = []  # (color, xc, yc), drawn after the blend below when solid=True
 
         for i in range(num_points):
 
@@ -104,15 +108,24 @@ def visualize_tracking(
             xc = int(points[i, t, 0] * width)
             yc = int(points[i, t, 1] * height)
 
-            cv2.circle(
-                overlay,
-                (xc, yc),
-                radius=radius,
-                color=color.tolist(),
-                thickness=-1
-            )
+            if solid:
+                # Drawn directly onto the frame after the blend below, instead of being
+                # additively composited — additive blending clips/washes out bright colors
+                # on light backgrounds (e.g. mid-gray tissue), which looks faded.
+                solid_dots.append((color.tolist(), xc, yc))
+            else:
+                cv2.circle(
+                    overlay,
+                    (xc, yc),
+                    radius=radius,
+                    color=color.tolist(),
+                    thickness=-1
+                )
 
         video[t] = cv2.addWeighted(video[t], 1.0, overlay, alpha, 0)
+
+        for color, xc, yc in solid_dots:
+            cv2.circle(video[t], (xc, yc), radius=radius, color=color, thickness=-1)
 
     return video
 

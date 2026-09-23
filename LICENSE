@@ -1,28 +1,53 @@
-This MIT License applies to the original code in this repository (EchoTracker,
-EchoTracker2, SpeckNet, and supporting utilities/demos). Several third-party
-models vendored under `models/` (CoTracker3, LocoTrack, PIPs++) retain their
-own original licenses, which are NOT MIT — see the "License" section of
-README.md for the full breakdown, including a non-commercial restriction on
-the CoTracker3 code.
-
-MIT License
-
 Copyright (c) 2026 Md Abulkalam Azad
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+This project uses a multi-license structure due to third-party code inclusion.
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+--------------------------------------------------------------------------------
+1. Original code and model weights — CC BY-NC 4.0
+--------------------------------------------------------------------------------
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+The original code in this repository (EchoTracker, EchoTracker2, SpeckNet, and
+supporting demos/utilities) and all model weights/checkpoints released from
+this repository — including the fine-tuned LocoTrack, CoTracker3 and PIPs++
+checkpoints produced by this project — are licensed under the Creative Commons
+Attribution-NonCommercial 4.0 International License (CC BY-NC 4.0).
+
+You are free to share and adapt this material for noncommercial purposes only
+(e.g., academic research, education, personal projects), provided you give
+appropriate credit, provide a link to the license, and indicate if changes
+were made. Commercial use is not permitted under this license.
+
+Full legal code: https://creativecommons.org/licenses/by-nc/4.0/legalcode
+
+Commercial licensing:
+To use this project's code or weights for commercial purposes, you must obtain
+a separate commercial license agreement. Commercial licensing is handled by
+NTNU Technology Transfer AS (NTNU TTO). Contact NTNU TTO directly, or contact
+md.a.azad@ntnu.no or andreas.ostvik@ntnu.no, who will coordinate with NTNU TTO.
+
+--------------------------------------------------------------------------------
+2. Third-party code
+--------------------------------------------------------------------------------
+
+The following third-party code included under `models/` retains its original
+license. Those licenses govern that code and are not replaced by the license
+in section 1.
+
+  - CoTracker3 (`models/cotracker3.py`, `models/cotracker/`)
+    Source:  https://github.com/facebookresearch/co-tracker
+    License: CC BY-NC 4.0, Copyright (c) Meta Platforms, Inc. and affiliates.
+
+  - LocoTrack (`models/locotrack.py`)
+    Source:  https://github.com/cvlab-kaist/locotrack
+    License: Apache License 2.0 — http://www.apache.org/licenses/LICENSE-2.0
+
+  - PIPs++ (`models/pips2.py`)
+    Source:  https://github.com/aharley/pips2
+    License: MIT License
+
+Third-party pretrained models used alongside this project (e.g., base
+checkpoints obtained from the original sources above) are subject to their own
+license terms and are not covered by this project's license.
+
+When using this project, retain the respective license notices for each
+component.

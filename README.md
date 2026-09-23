@@ -245,16 +245,17 @@ This repo also bundles several point-tracking models as baselines. If your work 
  
 ## 📜 License
 
-This repository uses a multi-license structure: the original code is MIT-licensed, but several vendored third-party models keep their own upstream license — including one that is **non-commercial only**. Check the table below before using a specific component, especially commercially.
+This project uses a multi-license structure due to third-party code inclusion.
 
 | Component | License |
 |---|---|
-| Original code (this repo — EchoTracker, EchoTracker2, SpeckNet, demos, utils) | [MIT License](LICENSE) |
-| CoTracker3 (`models/cotracker3.py`, `models/cotracker/`) — [source](https://github.com/facebookresearch/co-tracker) | [CC BY-NC 4.0](https://github.com/facebookresearch/co-tracker/blob/main/LICENSE.md) — **non-commercial use only** |
-| LocoTrack (`models/locotrack.py`) — [source](https://github.com/cvlab-kaist/locotrack) | Apache License 2.0 |
-| PIPs++ (`models/pips2.py`) — [source](https://github.com/aharley/pips2) | MIT License |
+| Original code (EchoTracker, EchoTracker2, SpeckNet, demos, utils) and all model weights/checkpoints released from this repository | [CC BY-NC 4.0](LICENSE) |
+| CoTracker3 integration code (`models/cotracker3.py`, `models/cotracker/`) — [source](https://github.com/facebookresearch/co-tracker) | [CC BY-NC 4.0](https://github.com/facebookresearch/co-tracker/blob/main/LICENSE.md) |
+| LocoTrack integration code (`models/locotrack.py`) — [source](https://github.com/cvlab-kaist/locotrack) | Apache License 2.0 |
+| PIPs++ integration code (`models/pips2.py`) — [source](https://github.com/aharley/pips2) | MIT License |
 
-> ⚠️ **CoTracker3 is CC BY-NC 4.0**, which forbids commercial use of that component regardless of this repo's own MIT license. If you need a commercially-usable model, use `EchoTracker2`, `EchoTracker`, `SpeckNet`, `LocoTrack`, or `PIPs++` instead.
+This project's original code and model weights are free to use for **noncommercial purposes only** (e.g., academic research, education, personal projects), with attribution. This covers all checkpoints released from this repository, including the fine-tuned LocoTrack, CoTracker3 and PIPs++ checkpoints produced by this project — see [Model weights](#model-weights). **Commercial use is not permitted under this license.** If you wish to use this project's code or weights for commercial purposes, you must obtain a separate commercial license agreement. Commercial licensing is handled by NTNU Technology Transfer AS (NTNU TTO) — you can reach out to them directly, or contact md.a.azad@ntnu.no or andreas.ostvik@ntnu.no, who will coordinate with NTNU TTO.
 
-When redistributing any part of this project, retain the license notice for each component you use. See the [`LICENSE`](LICENSE) file for the full text of this repo's own license. 
+If you use other, third-party pretrained models alongside this project (e.g., a base LocoTrack, CoTracker3 or PIPs++ checkpoint from its original source), check that model's own license terms separately — they are not covered by this project's license.
 
+When using this project, retain the respective license notices for each component. See the [`LICENSE`](LICENSE) file for full terms.

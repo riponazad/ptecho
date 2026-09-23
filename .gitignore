@@ -3,11 +3,14 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+
+temp.py
+
 # C extensions
 *.so
 
 #file types
-#*.mp4
+*.mp4
 *.pt
 *.pth
 
