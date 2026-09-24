@@ -55,12 +55,12 @@ Download each checkpoint and place it in the corresponding destination folder be
 
 | Model | Checkpoint | Destination |
 |---|---|---|
-| EchoTracker2 | [`model-0.pth`](#) | `weights/echotracker2/` |
-| LocoTrack | [`model-85.pth`](#) | `weights/locotrack/` |
-| CoTracker3 | [`model-0.pth`](#) | `weights/cotracker3/` |
-| EchoTracker | [`model-0.pth`](#) | `weights/echotracker/` |
-| PIPs++ | [`model-0.pth`](#) | `weights/pips2/` |
-| SpeckNet | [`model-0.pth`](#) | `weights/specknet/` |
+| EchoTracker2 | [`model-0.pth`](https://drive.google.com/file/d/17SiOG8MUpCxK1_MZ-LfIGrH2mDDv329l/view?usp=sharing) | `weights/echotracker2/` |
+| LocoTrack | [`model-85.pth`](https://drive.google.com/file/d/1AHYr-yHkXEku90j_2q-qNCkPYa5OnEjq/view?usp=sharing) | `weights/locotrack/` |
+| CoTracker3 | [`model-0.pth`](https://drive.google.com/file/d/15ofxRu1H--nsxU6HiLqsY6lZaxgKN5uQ/view?usp=sharing) | `weights/cotracker3/` |
+| EchoTracker | [`model-0.pth`](https://drive.google.com/file/d/1e1jt2j4rTHtdwUBqmqYdMcVHU1und66d/view?usp=sharing) | `weights/echotracker/` |
+| PIPs++ | [`model-0.pth`](https://drive.google.com/file/d/1WmLB7s7XCefZqvp4QBqo31uVzTh82OgS/view?usp=sharing) | `weights/pips2/` |
+| SpeckNet | [`model-0.pth`](https://drive.google.com/file/d/19QJJYJ8wKqzL_UbH4JGANn4pP1hHKSiH/view?usp=sharing) | `weights/specknet/` |
 
 
 Update the paths in [configs.py](configs.py) if you store weights elsewhere.
