@@ -212,11 +212,11 @@ model.train(
 If you find our work useful, please consider citing **both** of the papers this repo implements:
  
 ```bibtex
-@inproceedings{author2026echotracker2,
-  title     = {EchoTracker2: Enhancing Myocardial Point Tracking by Modeling Local Motion},
-  author    = {Last, First and Last, First},
-  booktitle = {MICCAI},
-  year      = {2026}
+@article{azad2026echotracker2,
+  title={EchoTracker2: Enhancing Myocardial Point Tracking by Modeling Local Motion},
+  author={Azad, Md Abulkalam and Holmstr{\o}m, Vegard and Nyberg, John and Lovstakken, Lasse and Dalen, H{\aa}vard and Grenne, Bj{\o}rnar and {\O}stvik, Andreas},
+  journal={arXiv preprint arXiv:2605.12140},
+  year={2026}
 }
  
 @InProceedings{Azad_2025_ICCV,
